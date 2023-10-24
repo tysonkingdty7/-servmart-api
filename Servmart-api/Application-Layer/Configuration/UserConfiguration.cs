@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain_Layer.DTOs;
 
 namespace Application_Layer.Configuration
 {
@@ -14,8 +15,7 @@ namespace Application_Layer.Configuration
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("User", "User");
-            builder.HasKey(u => u.ID);
-            builder.Property(u => u.ID).ValueGeneratedOnAdd();
+          
             builder.Property(u => u.FName).IsRequired().HasMaxLength(128);
             builder.Property(u => u.LName).IsRequired().HasMaxLength(128);
             builder.Property(u => u.SSN).IsRequired().HasMaxLength(14);

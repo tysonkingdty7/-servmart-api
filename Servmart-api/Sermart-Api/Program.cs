@@ -27,7 +27,11 @@ namespace Sermart_Api
                 );
                 
             });
-            builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            builder.Services.AddIdentity<UserDTO, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            builder.Services.AddCors();
+
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -41,7 +45,10 @@ namespace Sermart_Api
 
             app.UseAuthorization();
 
-
+            app.UseCors(o =>
+            {
+                o.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
             app.MapControllers();
 
             app.Run();

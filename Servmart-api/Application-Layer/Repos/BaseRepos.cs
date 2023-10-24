@@ -15,5 +15,12 @@ namespace Application_Layer.Repos
         {
            _appContext = appContext;
         }
+
+
+
+        public IEnumerable<T> GetAll()
+        {
+           return _appContext.Set<T>().ToList();
+        }
     }
 }

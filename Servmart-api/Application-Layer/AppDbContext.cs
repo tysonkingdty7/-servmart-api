@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application_Layer
 {
-    public class AppDbContext:IdentityDbContext<User>
+    public class AppDbContext:IdentityDbContext<UserDTO>
     {
         public AppDbContext(DbContextOptions options):base(options)
         {

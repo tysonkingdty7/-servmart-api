@@ -8,6 +8,8 @@ namespace Infrastructure_Layer.IRepos
 {
     public interface IBaseRepo<T> where T : class
     {
+        IEnumerable<T> GetAll();
+
 
         
     }

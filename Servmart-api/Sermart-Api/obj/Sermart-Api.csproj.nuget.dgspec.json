@@ -180,7 +180,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\servmart\\-servmart-api\\Servmart-api\\Domain-Layer\\Domain-Layer.csproj": {
+                "projectPath": "D:\\servmart\\-servmart-api\\Servmart-api\\Domain-Layer\\Domain-Layer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
